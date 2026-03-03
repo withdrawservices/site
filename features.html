@@ -191,43 +191,98 @@ footer {
 <main>
 <section class="page">
   <div class="page-inner" id="tilt">
-    <h1>Features</h1>
-    <p class="lead">
-      uhh what do i put here again?
-    </p>
+  <h1>Features</h1>
+  <p class="lead">
+    withdraw.cc — feature overview. A compact summary of the toolset:
+    ESP, aim assist, visuals, exploits and quality-of-life utilities.
+  </p>
 
-    <div class="features">
-      <div class="card"><div class="card-inner">
-        <h3>1</h3>
-        <p>.</p>
-      </div></div>
+  <div class="features">
+    <div class="card" data-feature="esp"><div class="card-inner">
+      <h3>ESP & HUD</h3>
+      <p>
+        Player & drone ESP (boxes, skeleton, tracers), distance/health/name
+        labels, item ESP, passive player tagging, customizable colors and
+        performance modes. Also a configurable HUD with header, FPS/ping
+        chips and crosshair options.
+      </p>
+      <p class="detail" style="display:none;">
+        - Player boxes, corner boxes, filled boxes, skeleton lines<br>
+        - Tracers originating from bottom/center/mouse<br>
+        - Passive player detection & (P) tag, team colors, LOS-only mode<br>
+        - Drone ESP with labels and tracers; item/tool text; FPS/ping header
+      </p>
+    </div></div>
 
-      <div class="card"><div class="card-inner">
-        <h3>2</h3>
-        <p>.</p>
-      </div></div>
+    <div class="card" data-feature="aim"><div class="card-inner">
+      <h3>Aimbot & Silent Aim</h3>
+      <p>
+        Aim assist with FOV, smoothing, LOS and team filters. Silent Aim
+        support (server-side hit redirection), prediction/lead settings,
+        hold-to-use, and triggerbot.
+      </p>
+      <p class="detail" style="display:none;">
+        - Target part selection (Head / HumanoidRootPart)<br>
+        - Velocity prediction, bullet speed, lead strength<br>
+        - Silent Aim meta-hooks and mouse overrides for stealth targeting<br>
+        - Triggerbot with configurable delay, hold-to-use and filters
+      </p>
+    </div></div>
 
-      <div class="card"><div class="card-inner">
-        <h3>3</h3>
-        <p>.</p>
-      </div></div>
+    <div class="card" data-feature="combat"><div class="card-inner">
+      <h3>Combat Utilities</h3>
+      <p>
+        No recoil renaming, fast reload (animation speed adjustments), and
+        recoil removal toggles to make gunplay more stable and responsive.
+      </p>
+      <p class="detail" style="display:none;">
+        - Rename/remove "Recoil" tags on weapons<br>
+        - Auto-detect reload animations and speed them up<br>
+        - Toggleable, safe-ish connections and revert logic
+      </p>
+    </div></div>
 
-      <div class="card"><div class="card-inner">
-        <h3>4</h3>
-        <p>.</p>
-      </div></div>
+    <div class="card" data-feature="visuals"><div class="card-inner">
+      <h3>Visuals & Camera</h3>
+      <p>
+        Fullbright (brightness, fog/shadow toggles), FOV lock, third-person
+        camera with smoothing, and other visual helpers (hide leaves, color
+        correction).
+      </p>
+      <p class="detail" style="display:none;">
+        - Fullbright with saved state and optional color correction<br>
+        - FOV lock/watch to prevent camera scripts from overriding value<br>
+        - Smooth third-person camera with unlock mouse option
+      </p>
+    </div></div>
 
-      <div class="card"><div class="card-inner">
-        <h3>5</h3>
-        <p>.</p>
-      </div></div>
+    <div class="card" data-feature="utility"><div class="card-inner">
+      <h3>Exploits & Utilities</h3>
+      <p>
+        Semigod loadout spawns/equips items, auto-heal loops, Loadout button,
+        equip scripts, and "Kill All" routines triggered from UI actions.
+      </p>
+      <p class="detail" style="display:none;">
+        - Command-based spawn/equip sequences and automatic equip emulation<br>
+        - Auto-heal loops (medkit/wrench use) and item equip helpers (VIM)<br>
+        - Convenience: equip loadout button, force spawn commands
+      </p>
+    </div></div>
 
-      <div class="card"><div class="card-inner">
-        <h3>6</h3>
-        <p>.</p>
-      </div></div>
-    </div>
+    <div class="card" data-feature="misc"><div class="card-inner">
+      <h3>Movement & Anti-detection</h3>
+      <p>
+        CFrame speed movement, anti-yaw (lock/smooth/random), void-position
+        hold mode, and ignore/whitelist UI for players.
+      </p>
+      <p class="detail" style="display:none;">
+        - CFrame-speed movement (configurable), void freeze at camera XY<br>
+        - Anti-yaw modes to keep HumanoidRootPart orientation stable<br>
+        - Whitelist/ignore management integrated into settings
+      </p>
+    </div></div>
   </div>
+</div>
 </section>
 </main>
 
