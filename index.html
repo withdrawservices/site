@@ -203,6 +203,51 @@
       font-size: 0.96rem;
       line-height: 1.55;
     }
+    
+    .purchase-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  backdrop-filter: blur(10px);
+  display: grid;
+  place-items: center;
+  z-index: 999;
+}
+
+.purchase-modal.hidden {
+  display: none;
+}
+
+.purchase-box {
+  background: linear-gradient(180deg, #0d0d0d, #060606);
+  border: 1px solid var(--edge);
+  border-radius: 22px;
+  padding: 34px 36px 30px;
+  min-width: 320px;
+  text-align: center;
+  box-shadow: 0 40px 140px rgba(0,0,0,.9);
+}
+
+.purchase-box h3 {
+  margin-bottom: 22px;
+  font-size: 1.2rem;
+}
+
+.purchase-actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.purchase-close {
+  background: none;
+  border: none;
+  color: var(--muted);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
 
     footer {
       text-align: center;
@@ -214,6 +259,34 @@
   </style>
 </head>
 <body>
+    
+    <div id="purchaseModal" class="purchase-modal hidden">
+  <div class="purchase-box">
+    <h3>Choose payment method</h3>
+
+    <div class="purchase-actions">
+      <a
+        class="btn primary"
+        href="https://withdraw.mysellauth.com/product/withdraw-town-script"
+        target="_blank"
+        rel="noopener"
+      >
+        Credit / Debit
+      </a>
+
+      <a
+        class="btn"
+        href="https://www.roblox.com/game-pass/1594085753/kuromiware"
+        target="_blank"
+        rel="noopener"
+      >
+        Robux
+      </a>
+    </div>
+
+    <button class="purchase-close" id="closePurchase">Cancel</button>
+  </div>
+</div>
 
   <canvas id="bg"></canvas>
 
@@ -244,11 +317,12 @@
         </a>
 
         <a
-          class="btn"
-          href="https://kuromi.bgng.io/product/KuromiWare"
-        >
-          purchase
-        </a>
+  class="btn"
+  href="#"
+  id="purchaseBtn"
+>
+  purchase
+</a>
 </div>
 
       </div>
@@ -393,6 +467,26 @@
     }
 
     draw();
+  </script>
+  <script>
+      const purchaseBtn = document.getElementById('purchaseBtn');
+const purchaseModal = document.getElementById('purchaseModal');
+const closePurchase = document.getElementById('closePurchase');
+
+purchaseBtn.addEventListener('click', (e) => {
+  e.preventDefault();
+  purchaseModal.classList.remove('hidden');
+});
+
+closePurchase.addEventListener('click', () => {
+  purchaseModal.classList.add('hidden');
+});
+
+purchaseModal.addEventListener('click', (e) => {
+  if (e.target === purchaseModal) {
+    purchaseModal.classList.add('hidden');
+  }
+});
   </script>
 </body>
 </html>
