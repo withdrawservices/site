@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>withdraw.cc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div id="splash-screen">
+    <div class="splash-content">
+      <div class="splash-logo">WITHDRAW</div>
+      <div class="splash-loader">
+        <div class="splash-bar"></div>
+      </div>
+    </div>
+  </div>
+
+  <nav id="navbar">
+    <div class="nav-left">
+      <a href="index.html" class="nav-logo">WITHDRAW</a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="search.html?type=movie">Movies</a></li>
+        <li><a href="search.html?type=tv">TV Shows</a></li>
+        <li><a href="#" id="my-list-nav">My List</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <div class="nav-search" id="nav-search">
+        <button class="search-btn" id="search-toggle" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+        </button>
+        <input type="text" id="search-input" placeholder="Titles, people, genres" autocomplete="off" />
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <main id="main-content" style="opacity:0; transition: opacity 0.6s ease;">
+
+    <section id="hero" class="hero">
+      <div class="hero-backdrop" id="hero-backdrop"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-badge">Featured</div>
+        <h1 class="hero-title" id="hero-title">Loading...</h1>
+        <p class="hero-desc" id="hero-desc"></p>
+        <div class="hero-meta" id="hero-meta"></div>
+        <div class="hero-buttons">
+          <button class="btn btn-primary" id="hero-play-btn">
+            <svg viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+            Play
+          </button>
+          <button class="btn btn-secondary" id="hero-info-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            More Info
+          </button>
+        </div>
+      </div>
+    </section>
+    <section id="categories" class="categories">
+    </section>
+
+  </main>
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">WITHDRAW</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
