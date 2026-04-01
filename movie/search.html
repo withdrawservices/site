@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>withraw.cc</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="search-page">
+
+  <!-- ===== NAVBAR ===== -->
+  <nav id="navbar" class="navbar-solid">
+    <div class="nav-left">
+      <a href="index.html" class="nav-logo">WITHDRAW</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="search.html?type=movie">Movies</a></li>
+        <li><a href="search.html?type=tv">TV Shows</a></li>
+        <li><a href="index.html#my-list">My List</a></li>
+      </ul>
+    </div>
+    <div class="nav-right">
+      <div class="nav-search nav-search--open" id="nav-search">
+        <button class="search-btn" id="search-toggle" aria-label="Search">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+          </svg>
+        </button>
+        <input type="text" id="search-input" placeholder="Titles, people, genres" autocomplete="off" autofocus />
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== SEARCH MAIN ===== -->
+  <main class="search-main container">
+
+    <div class="search-header">
+      <div class="search-bar-wrap">
+        <svg class="search-bar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="text" id="main-search-input" class="search-bar-input" placeholder="Search movies, TV shows, people…" autocomplete="off" />
+        <button class="search-clear" id="search-clear" aria-label="Clear" style="display:none">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+      </div>
+      <div class="search-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="movie">Movies</button>
+        <button class="filter-btn" data-filter="tv">TV Shows</button>
+      </div>
+    </div>
+
+    <div id="search-status" class="search-status"></div>
+    <div id="search-results" class="search-results-grid"></div>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">WITHDRAW</span>
+      
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
