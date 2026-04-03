@@ -164,6 +164,56 @@
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 38px;
     }
+    
+    /* PlotSync side promo */
+.plotsync-promo {
+  position: fixed;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 240px;
+
+  padding: 20px;
+  border-radius: 18px;
+
+  background: linear-gradient(180deg, #0d0d0d, #060606);
+  border: 1px solid var(--edge);
+
+  box-shadow: 0 30px 100px rgba(0,0,0,0.8);
+  z-index: 20;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.plotsync-promo:hover {
+  transform: translateY(-50%) scale(1.03);
+  box-shadow: 0 40px 120px rgba(0,0,0,0.95);
+}
+
+.plotsync-promo h3 {
+  font-size: 1.1rem;
+  margin-bottom: 8px;
+}
+
+.plotsync-promo p {
+  font-size: 0.85rem;
+  color: var(--muted);
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+.plotsync-promo .btn {
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 0.85rem;
+}
+
+/* mobile fallback */
+@media (max-width: 900px) {
+  .plotsync-promo {
+    display: none;
+  }
+}
 
     .card {
       position: relative;
@@ -301,6 +351,20 @@
       <a href="https://www.withdraw.cc/movie">Movies</a>
     </nav>
   </header>
+  
+  <div class="plotsync-promo">
+  <h3>PlotSync</h3>
+  <p>Replicate any plot in seconds. PlotSync scans, copies, and rebuilds structures from other players directly onto your own plot in Town | clean, fast, and accurate.</p>
+
+  <a
+    class="btn primary"
+    href="https://discord.gg/N4459kkeFE"
+    target="_blank"
+    rel="noopener"
+  >
+    Join
+  </a>
+</div>
 
   <main>
     <section class="hero">
@@ -488,6 +552,17 @@ purchaseModal.addEventListener('click', (e) => {
     purchaseModal.classList.add('hidden');
   }
 });
+  </script>
+  <script>
+      const promo = document.querySelector('.plotsync-promo');
+promo.style.opacity = "0";
+promo.style.transform = "translateY(-50%) translateX(40px)";
+
+setTimeout(() => {
+  promo.style.transition = "all 0.4s ease";
+  promo.style.opacity = "1";
+  promo.style.transform = "translateY(-50%) translateX(0)";
+}, 200);
   </script>
 </body>
 </html>
